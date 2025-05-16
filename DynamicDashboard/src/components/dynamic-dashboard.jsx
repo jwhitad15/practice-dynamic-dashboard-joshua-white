@@ -1,5 +1,5 @@
 let userName = "Joshua";
-const greeting = <h1> Good Day <br /> {userName} </h1>;
+const greeting = <h1 class="head"> Good Day, <br /> {userName} <hr/> </h1>;
 
 const DashboardGreeting = () => {
 

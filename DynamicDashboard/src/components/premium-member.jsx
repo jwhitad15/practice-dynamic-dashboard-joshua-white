@@ -6,12 +6,13 @@ const PremiumMember = () => {
     let alert;
 
     if (isPremium) {
-        return <p> Upgrade to premium to enjoy exclusive features! </p>;
+        return <div id="scrolling1"> <p class="paragraph"> UPGRADE TO PREMIUM TO ENJOY PREMIUM FEATURES! </p> </div>;
     } else if (!isPremium) {
-        return <p> Thank you for being a premium member!</p>;
+        return <div id="scrolling2"> <p class="paragraph"> THANK YOU FOR BEING A PREMIUM MEMBER! </p> </div>;
     };
 };
 <br />
+
 
 export default PremiumMember;
 

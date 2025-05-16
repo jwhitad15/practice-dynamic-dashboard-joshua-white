@@ -3,40 +3,69 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  border-style: inset;
+  background-color: darkseagreen;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.head {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 2px .7px 5px black;
 }
 
-@keyframes logo-spin {
+.paragraph {
+  line-height: 3;
+  background-color: goldenrod;
+  border-style: double;
+  border-color: darkslategray;
+  text-shadow: 1px .7px 3.3px black;
+}
+
+.task-list {
+  border-style: outset;
+  background-color: crimson;
+  border-color: darkolivegreen;
+  text-align: left;
+  text-shadow: 1px 1px 3.3px black;
+}
+
+.date {
+ background-color: aqua;
+}
+
+#scrolling1 {  
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  
+  -moz-animation: my-animation 15s linear infinite;
+  -webkit-animation: my-animation 15s linear infinite;
+  animation: my-animation 15s linear infinite;
+}
+
+#scrolling2 {  
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  
+  -moz-animation: my-animation 15s linear infinite;
+  -webkit-animation: my-animation 15s linear infinite;
+  animation: my-animation 15s linear infinite;
+}
+
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
   from {
-    transform: rotate(0deg);
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
   }
   to {
-    transform: rotate(360deg);
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

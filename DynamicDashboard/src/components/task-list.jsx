@@ -1,28 +1,29 @@
 const RenderList = () => {
 
     let sampleTasks = [
-        { task: "Sweep", status: true },
-        { task: "Mop", status: false },
-        { task: "Dust", status: true },
-        { task: "Scrub", status: true },
-        { task: "Rinse", status: false }
+        { task: "SWEEP KITCHEN", status: "completed  ✅" },
+        { task: "MOP KITCHEN", status: "incomplete 🙅🏽‍♂️" },
+        { task: "DUST FURNITURE", status: "completed ✅" },
+        { task: "SCRUB PATIO", status: "completed ✅" },
+        { task: "RINSE MOP BUCKET", status: "incomplete 🙅🏽‍♂️" }
     ];
 
     const renderTasks = sampleTasks.map(tasky => {
-
         return (
-            // <ol>
-                <li> {tasky.task}: {tasky.status}</li>
-            /* </ol> */
+                <li> {tasky.task} - {tasky.status} </li>
         );
     });
 
-    const ele = <ol>{renderTasks}</ol>;
+    const ele = <ol class="task-list">{renderTasks}</ol>;
+    return ele;
 
-    {sampleTasks.status ? "chore complete" : "chore not complete"}
+
+    // let checkmark = &#x2705
+    // let redX = &#x274C
+    // sampleTasks.status ? checkmark : redX
     
 
-    return ele;
+
 }
 
 export default RenderList;
